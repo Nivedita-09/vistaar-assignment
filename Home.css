@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:opsz@6..12&family=Raleway&family=Rubik+Mono+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Lato&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -102,6 +103,52 @@
   position: absolute;
   order: 1;
 }
+.navbar-slide {
+  width: 100%;
+  height: 700px;
+  background-color: #ff007f;
+}
+#navbar-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: none;
+  animation: slide-in-from-left 0.5s ease-in-out forwards;
+}
+
+@keyframes slide-in-from-left {
+  from {
+    right: 0%;
+  }
+  to {
+    right: -100%;
+  }
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.navbar-left-div {
+  width: 80%;
+}
+.navbar-option {
+  /* padding: 0px ; */
+}
+.navbar-option li {
+  text-align: left;
+  color: #fff;
+  font-family: "Kanit", sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  padding: 20px 50px;
+}
+.navbar-right-div {
+  width: 20%;
+}
 .home-slider-container {
   height: 100px;
   width: 100%;
@@ -109,10 +156,7 @@
   border-top: 3px solid #000;
   border-bottom: 3px solid #000;
 }
-.campaign-details-main-container-card-section-select-campaign {
-  /* display: grid;
-  gap: 10px; */
-}
+
 .campaign-ideas-container {
   width: 100%;
   height: 1000px;
@@ -301,7 +345,11 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
   justify-content: center;
+}
+.sidebar-menus-div {
+  display: block;
 }
 .campaign-details-sidebar-img {
   width: 100%;
@@ -315,6 +363,7 @@
   align-items: center;
   width: 90%;
   margin: auto;
+  padding: 20px 0px;
   /* justify-content: center; */
 }
 .campaign-details-sidebar-menu h3 {
@@ -338,6 +387,8 @@
 .campaign-details-main-container-heading {
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .campaign-details-main-container h1 {
   font-family: "Kanit", sans-serif;
@@ -350,9 +401,120 @@
   width: 90%;
   margin: auto;
   display: grid;
+
   grid-template-columns: 1fr 1fr 1fr;
 }
-.campaign-details-main-container-card {
+.campaign-details-main-container-card-section-2 {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px 0px;
+}
+.duration-campaign {
+  /* margin: 40px 0px; */
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px;
+}
+.duration-campaign h3 {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 500;
+  font-size: 24px;
+  color: #0f0f0f;
+  padding: 20px 0px;
+}
+.duration-campaign select {
+  background-color: #3c159f88;
+  padding: 5px;
+  width: 50%;
+  border: none;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  margin: 20px 0px;
+}
+.contact-detail-div {
+  display: flex;
+  flex-direction: row;
+  padding: 60px 0px;
+}
+.contact-detail-div form {
+  width: 60%;
+}
+.contact-detail-div img {
+  width: 40%;
+}
+.form-data {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 10px;
+  margin: auto;
+  width: 90%;
+  /* height: 650px; */
+}
+.form-data label {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+.text-input {
+  border: 2px solid #4700ff;
+  border-radius: 5px;
+  padding: 10px;
+  width: 50%;
+}
+.text-area {
+  width: 80%;
+  border: 2px solid #4700ff;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100px;
+}
+.done-div {
+  background-color: #4700ff;
+  width: 100%;
+  height: 750px;
+  text-align: center;
+  justify-content: center;
+}
+.done-div button {
+  background-color: #fff;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  color: #2f42dc;
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  width: 30%;
+}
+.done-div h1 {
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  color: #fff;
+}
+.done-img-div {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  position: relative;
+}
+.sparkle {
+  /* height: 200px; */
+}
+.done-img {
+  /* height: 550px; */
+  position: absolute;
+  left: 20%;
 }
 .metric-measures-card-ellipse-metric-4 {
   background-image: url("./assets/Ellipse34.svg");
@@ -395,16 +557,57 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: #3d159f;
+  justify-content: center;
+  height: 80px;
+  gap: 20px;
+  /* background-color: #3d159f; */
 }
 
 .campaign-details-div {
   width: 100%;
+  height: 650px;
 }
 .footer {
-  height: 500px;
+  /* height: 500px; */
   width: 100%;
   background-color: #000;
+}
+.footer-upper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.col-1 {
+  width: 20%;
+  padding: 20px 10px;
+}
+.col-2 {
+  width: 40%;
+  padding: 20px 10px;
+}
+.rows {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start; */
+  gap: 5px;
+  padding: 10px 0px;
+}
+.rows p {
+  font-family: "Kanit", sans-serif;
+  font-size: 24px;
+  color: #fff;
+  /* font-weight: ; */
+}
+.col-3 {
+  width: 40%;
+  padding: 20px 10px;
+}
+.footer-lower {
+  text-align: center;
+  width: 100%;
+  font-family: "Kanit", sans-serif;
+  font-size: 24px;
+  color: #fff;
 }
 #metric1 {
   display: block;
@@ -498,6 +701,14 @@
 }
 #next-btn-campaign {
   display: block;
+  background-color: #4700ff;
+  width: 25%;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
 }
 #back-btn-campaign {
   display: none;
@@ -505,4 +716,13 @@
 #next-btn {
   border: none;
   background-color: transparent;
+}
+.back-btn-camp {
+  color: #5e20ff;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
 }

@@ -343,3 +343,46 @@ function redirectToOtherPage() {
   // Your redirection logic
   window.location.href = "./KnowMore.html";
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navbarContent = document.getElementById("navbar-content");
+
+  menuIcon.addEventListener("click", () => {
+    // Toggle the visibility of the navbar content and home container
+    navbarContent.style.display =
+      navbarContent.style.display === "block" ? "none" : "block";
+    homeContainer.style.display =
+      homeContainer.style.display === "block" ? "none" : "block";
+  });
+});
+
+window.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("menu-close").addEventListener("click", closefunc);
+  function closefunc() {
+    // Hide the navbar content
+    const navbarContent = document.getElementById("navbar-content");
+    navbarContent.style.display = "none";
+
+    // Navigate to the specific ID based on the clicked li element
+    const clickedLi = document.querySelector(".navbar-option li:hover"); // Get the hovered li element
+    const targetId = clickedLi.textContent.toLowerCase(); // Get the lowercase text of the hovered li element
+
+    // Switch based on the target ID to navigate to the corresponding section
+    switch (targetId) {
+      case "home":
+        window.location.hash = "#home";
+        break;
+      case "campaign ideas":
+        window.location.hash = "#campaign-ideas-container";
+        break;
+      case "metric measures":
+        window.location.hash = "#metric-measures-container";
+        break;
+      case "campaign details":
+        window.location.hash = "#campaign-details";
+
+        break;
+    }
+  }
+});

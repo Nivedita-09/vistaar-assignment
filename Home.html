@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./Home.css" />
-    <script src="./Script.js" defer></script>
-    <script src="./Section.js" defer></script>
+    <script src="./Script.js"></script>
+    <script src="./Section.js"></script>
   </head>
   <body>
-    <div class="home-container">
+    <div id="home" class="home-container">
       <div class="home-div-container">
         <div class="home-left-div">
           <div class="logo-div">
@@ -41,15 +41,45 @@
         </div>
         <div class="home-right-div">
           <div class="sidebar-container">
-            <img src="./assets/menu.svg" alt="menu" />
+            <img
+              src="./assets/menu.svg"
+              alt="menu"
+              id="menu-icon"
+              onclick="navbarfunc()"
+            />
           </div>
         </div>
       </div>
-      <div class="home-slider-container">
-        <div class=""></div>
+
+      <div class="home-slider-container"></div>
+    </div>
+    <div id="navbar-content">
+      <div class="navbar-slide">
+        <div class="navbar">
+          <div class="navbar-left-div">
+            <div class="navbar-option">
+              <ul>
+                <li>Home</li>
+                <li>Campaign Ideas</li>
+                <li>Metric Measures</li>
+                <li>Create Campaign</li>
+              </ul>
+            </div>
+          </div>
+          <div class="navbar-right-div">
+            <div class="sidebar-container">
+              <img
+                src="./assets/entypo_cross.png"
+                alt="menu"
+                id="menu-close"
+                onclick="closefunc()"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="campaign-ideas-container">
+    <div class="campaign-ideas-container" id="campaign-ideas-container">
       <div class="campaign-heading-container">
         <h1>CAMPAIGN IDEAS</h1>
       </div>
@@ -66,7 +96,7 @@
         </button>
       </div>
     </div>
-    <div class="metric-measures-container">
+    <div class="metric-measures-container" id="metric-measures-container">
       <div class="metric-measures-div">
         <div class="metric-measures-heading">
           <img src="./assets/MetricMeasures.png" alt="metric measures" />
@@ -251,8 +281,8 @@
         <img src="./assets/metric3b.gif" alt="campaign" class="campaign3" />
       </div>
     </div>
-    <div class="campaign-details">
-      <div class="campaign-details-sidebar">
+    <div class="campaign-details" id="campaign-details">
+      <div class="campaign-details-sidebar" id="sidebar-menus-div">
         <div class="campaign-details-sidebar-img">
           <img src="./assets/campaignImg.png" alt="banner" />
         </div>
@@ -262,136 +292,152 @@
           <img src="./assets/tick-all.svg" alt="tick all" id="tick1" />
         </div>
         <div class="campaign-details-sidebar-menu" id="sidebar-menu-2">
-          <img src="./assets/marketing (1) 1.png" alt="menu2" />
+          <img src="./assets/marketing(1)1.png" alt="menu2" />
           <h3>Select data fields to be collected</h3>
           <img src="./assets/tick-all.svg" alt="tick all" id="tick2" />
         </div>
         <div class="campaign-details-sidebar-menu" id="sidebar-menu-3">
-          <img src="./assets/hourglass 1.png" alt="menu3" />
+          <img src="./assets/hourglass1.png" alt="menu3" />
           <h3>Select Duration of campaign</h3>
           <img src="./assets/tick-all.svg" alt="tick all" id="tick3" />
         </div>
         <div class="campaign-details-sidebar-menu" id="sidebar-menu-4">
-          <img src="./assets/communicate 1.png" alt="menu4" />
+          <img src="./assets/communicate1.png" alt="menu4" />
           <h3>Contact details</h3>
           <img src="./assets/tick-all.svg" alt="tick all" id="tick4" />
         </div>
         <div class="campaign-details-sidebar-menu" id="sidebar-menu-5">
-          <img src="./assets/flag 1.png" alt="menu 5" />
+          <img src="./assets/flag1.png" alt="menu 5" />
           <h3>Completed</h3>
           <img src="./assets/tick-all.svg" alt="tick all" id="tick5" />
         </div>
       </div>
       <div class="campaign-details-main-container">
         <div class="campaign-details-main-container-heading">
-          <div
+          <!-- <div
             class="campaign-details-main-container-card-section-select-campaign"
-          >
-            <div class="campaign-details-div">
-              <div id="section-1">
-                <h1>SELECT CAMPAIGN TYPE</h1>
-                <div class="campaign-details-main-container-card-section">
-                  <div class="campaign-details-main-container-card">
-                    <img src="./assets/pictivatr.png" alt="pictivatr" />
-                    <h3>Pictivatr</h3>
-                  </div>
-                  <div class="campaign-details-main-container-card">
-                    <img src="./assets/Pledge.png" alt="pledge" />
-                    <h3>Pledge</h3>
-                  </div>
-                  <div class="campaign-details-main-container-card">
-                    <img src="./assets/survey.png" alt="survey" />
-                    <h3>Survey</h3>
-                  </div>
+          > -->
+          <div class="campaign-details-div">
+            <div id="section-1">
+              <h1>SELECT CAMPAIGN TYPE</h1>
+              <div class="campaign-details-main-container-card-section">
+                <div class="campaign-details-main-container-card">
+                  <img src="./assets/pictivatr.png" alt="pictivatr" />
+                  <h3>Pictivatr</h3>
                 </div>
-                <div class="campaign-details-main-container-card-section">
-                  <div class="campaign-details-main-container-card">
-                    <img src="./assets/Quiz.png" alt="pictivatr" />
-                    <h3>Quiz</h3>
-                  </div>
-                  <div class="campaign-details-main-container-card">
-                    <img src="./assets/video-based-quiz.png" alt="pledge" />
-                    <h3>Video based Quiz</h3>
-                  </div>
-                  <div class="campaign-details-main-container-card">
-                    <img src="./assets/gamification.png" alt="survey" />
-                    <h3>Gamification</h3>
-                  </div>
+                <div class="campaign-details-main-container-card">
+                  <img src="./assets/Pledge.png" alt="pledge" />
+                  <h3>Pledge</h3>
                 </div>
-                <div class="campaign-details-main-container-card-section">
-                  <div class="campaign-details-main-container-card">
-                    <img src="./assets/educational.png" alt="pictivatr" />
-                    <h3>Educational Ideas</h3>
-                  </div>
+                <div class="campaign-details-main-container-card">
+                  <img src="./assets/survey.png" alt="survey" />
+                  <h3>Survey</h3>
                 </div>
               </div>
-              <div id="section-2">
-                <h1>Select Duration of campaign</h1>
-                <div class="campaign-details-main-container-card-section">
-                  <div class="campaign-details-main-container-card">
-                    <img src="./assets/Impression.png" alt="pictivatr" />
-                    <h3>Impression</h3>
-                  </div>
-                  <div class="campaign-details-main-container-card">
-                    <img src="./assets/engagement.png" alt="pledge" />
-                    <h3>Engagement</h3>
-                  </div>
-                  <div class="campaign-details-main-container-card">
-                    <img src="./assets/social-media.png" alt="survey" />
-                    <h3>Social Media Followers</h3>
-                  </div>
+              <div class="campaign-details-main-container-card-section">
+                <div class="campaign-details-main-container-card">
+                  <img src="./assets/Quiz.png" alt="pictivatr" />
+                  <h3>Quiz</h3>
                 </div>
-                <div class="campaign-details-main-container-card-section">
-                  <div class="campaign-details-main-container-card">
-                    <img src="./assets/leads-and-sales.png" alt="pictivatr" />
-                    <h3>Leads and Sales</h3>
-                  </div>
-                  <div class="campaign-details-main-container-card">
-                    <img src="./assets/brand-awarness.png" alt="pledge" />
-                    <h3>Brand Awarness</h3>
-                  </div>
-                  <div class="campaign-details-main-container-card">
-                    <img src="./assets/analytics.png" alt="survey" />
-                    <h3>Analytics + Leaderboard</h3>
-                  </div>
+                <div class="campaign-details-main-container-card">
+                  <img src="./assets/video-based-quiz.png" alt="pledge" />
+                  <h3>Video based Quiz</h3>
+                </div>
+                <div class="campaign-details-main-container-card">
+                  <img src="./assets/gamification.png" alt="survey" />
+                  <h3>Gamification</h3>
                 </div>
               </div>
-              <div id="section-3">
-                <h1>Select Duration of campaign</h1>
-                <div class="duration-campaign">
-                  <h3>Pick a time</h3>
-                  <select>
-                    <option>12:00 PM</option>
-                    <option>12:00 PM</option>
-                    <option>12:00 PM</option>
-                    <option>12:00 PM</option>
-                  </select>
-                  <img src="./assets/Calendar.svg" alt="calendar" />
+              <div class="campaign-details-main-container-card-section">
+                <div class="campaign-details-main-container-card">
+                  <img src="./assets/educational.png" alt="pictivatr" />
+                  <h3>Educational Ideas</h3>
                 </div>
-              </div>
-
-              <div id="section-4">
-                <h1>Contact details</h1>
-                <form>
-                  <label>Name</label>
-                  <input type="text" />
-                  <label>Contact No</label>
-                  <input type="text" />
-                  <label>Purpose of campaign</label>
-                  <textarea />
-                </form>
-              </div>
-              <div id="section-5">
-                <h1>SECTION 5</h1>
               </div>
             </div>
-            <div class="campaign-details-main-container-btn">
-              <button id="back-btn-campaign">Go back</button>
-              <button id="next-btn-campaign" onclick="nextSection()">
-                Next
-              </button>
+            <div id="section-2">
+              <h1>Select Duration of campaign</h1>
+              <div class="campaign-details-main-container-card-section-2">
+                <div class="campaign-details-main-container-card">
+                  <img src="./assets/Impression.png" alt="pictivatr" />
+                  <h3>Impression</h3>
+                </div>
+                <div class="campaign-details-main-container-card">
+                  <img src="./assets/engagement.png" alt="pledge" />
+                  <h3>Engagement</h3>
+                </div>
+                <div class="campaign-details-main-container-card">
+                  <img src="./assets/social-media.png" alt="survey" />
+                  <h3>Social Media Followers</h3>
+                </div>
+              </div>
+              <div class="campaign-details-main-container-card-section-2">
+                <div class="campaign-details-main-container-card">
+                  <img src="./assets/leads-and-sales.png" alt="pictivatr" />
+                  <h3>Leads and Sales</h3>
+                </div>
+                <div class="campaign-details-main-container-card">
+                  <img src="./assets/brand-awarness.png" alt="pledge" />
+                  <h3>Brand Awarness</h3>
+                </div>
+                <div class="campaign-details-main-container-card">
+                  <img src="./assets/analytics.png" alt="survey" />
+                  <h3>Analytics + Leaderboard</h3>
+                </div>
+              </div>
+            </div>
+            <div id="section-3">
+              <h1>Select Duration of campaign</h1>
+              <div class="duration-campaign">
+                <h3>Pick a time</h3>
+                <select>
+                  <option>12:00 PM</option>
+                  <option>12:00 PM</option>
+                  <option>12:00 PM</option>
+                  <option>12:00 PM</option>
+                </select>
+                <img src="./assets/Calendar.svg" alt="calendar" />
+              </div>
+            </div>
+
+            <div id="section-4">
+              <h1>Contact details</h1>
+              <div class="contact-detail-div">
+                <form>
+                  <div class="form-data">
+                    <label>Name</label>
+                    <input type="text" class="text-input" />
+                  </div>
+                  <div class="form-data">
+                    <label>Contact No</label>
+                    <input type="text" class="text-input" />
+                  </div>
+                  <div class="form-data">
+                    <label>Purpose of campaign</label>
+                    <input type="text" class="text-area" />
+                  </div>
+                </form>
+                <img src="./assets/humngif.gif" alt="gif" />
+              </div>
+            </div>
+            <div id="section-5">
+              <div class="done-div">
+                <h1>Activatr team will reachout soon</h1>
+                <div class="done-img-div">
+                  <img src="./assets/sparkle.gif" class="sparkle" />
+                  <img src="./assets/Done.png" class="done-img" />
+                </div>
+                <button>DONE</button>
+              </div>
             </div>
           </div>
+          <div class="campaign-details-main-container-btn">
+            <button id="back-btn-campaign" class="back-btn-camp">
+              Go back
+            </button>
+            <button id="next-btn-campaign" onclick="nextSection()">Next</button>
+          </div>
+          <!-- </div> -->
         </div>
       </div>
     </div>
@@ -402,25 +448,27 @@
           <img src="./assets/activatrlogo.png" alt="activatr" />
         </div>
         <div class="col-2">
-          <div>
+          <div class="rows">
             <img src="./assets/mail.svg" alt="mail" />
             <p>contact@vistaardigital.com</p>
           </div>
-          <div>
+          <div class="rows">
             <img src="./assets/instagram.svg" alt="instagram" />
             <p>vistaardigital</p>
           </div>
         </div>
         <div class="col-3">
-          <img src="./assets/address.svg" alt="address" />
-          <p>
-            Paras Business Center, Unit 602, Kasturbha Cross Rd Number 1, Near
-            Kasturbha Police Station, Borivali East, Mumbai 400066, MH, India.
-          </p>
+          <div class="rows">
+            <img src="./assets/address.svg" alt="address" />
+            <p>
+              Paras Business Center, Unit 602, Kasturbha Cross Rd Number 1, Near
+              Kasturbha Police Station, Borivali East, Mumbai 400066, MH, India.
+            </p>
+          </div>
         </div>
       </div>
       <hr class="footer-hr" />
-      <div>
+      <div class="footer-lower">
         2018 © Copyright Vistaar Digital. All rights Reserved. Platform By
         Vistaardigital
       </div>
